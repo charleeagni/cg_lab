@@ -118,21 +118,21 @@ void myReshape(int w,int h)
 
 {
 
-glViewport(0,0,w,h);
+  glViewport(0,0,w,h);
 
-glMatrixMode(GL_PROJECTION);
+  glMatrixMode(GL_PROJECTION);
 
-glLoadIdentity();
+  glLoadIdentity();
 
-if(w<=h)
+  if(w<=h)
 
-glOrtho(-2.0,2.0,-2.0*(GLfloat)h/(GLfloat)w,2.0*(GLfloat)h/(GLfloat)w,10.0,10.0);
+  glOrtho(-2.0,2.0,-2.0*(GLfloat)h/(GLfloat)w,2.0*(GLfloat)h/(GLfloat)w,10.0,10.0);
 
-else
+  else
 
-glOrtho(-2.0*(GLfloat)w/(GLfloat)h,2.0*(GLfloat)w/(GLfloat)h,-2.0,2.0,-10.0,10.0);
+  glOrtho(-2.0*(GLfloat)w/(GLfloat)h,2.0*(GLfloat)w/(GLfloat)h,-2.0,2.0,-10.0,10.0);
 
-glMatrixMode(GL_MODELVIEW);
+  glMatrixMode(GL_MODELVIEW);
 
 }
 
